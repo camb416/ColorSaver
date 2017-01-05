@@ -1,0 +1,30 @@
+{
+	"decent-speed" : 60,
+	"background" : "background.jpg",
+	"gears" : [
+		"gear1.png", "gear2.png", "gear3.png", "gear4.png"
+	],
+
+	"colors" : [
+		{"name" : "Greenery",
+			"rgb" : [133,176,66]
+		},
+		{"name" : "Serenity",
+			"rgb" : [143,166,210]
+		},
+		{"name" : "Rose Quartz",
+			"rgb" : [243,220,222]
+		},
+		{"name" : "Treetop",
+			"rgb" : [70,107,44]
+		},{"name" : "Twilight Purple",
+			"rgb" : [102,99,140]
+		},{"name" : "Orion Blue",
+			"rgb" : [63,79,95]
+		},{"name" : "Calypso Coral",
+			"rgb" : [242,90,108]
+		},{"name" : "Nimbus Cloud",
+			"rgb" : [214,212,218]
+		}
+	]
+}

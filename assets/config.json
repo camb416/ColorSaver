@@ -1,36 +1,375 @@
 {
-	"colors" : [
+	"palettes" : [
 		{
-			"name" : "Greenery",
-			"rgb" : [133,176,66]
+			"name": "Transitions",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Serenity",
-			"rgb" : [143,166,210]
+			"name": "Ethereal Material",
+			"colors" : [
+				{
+					"name" : "Greenery2",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Rose Quartz",
-			"rgb" : [243,220,222]
+			"name": "Grand Canyon",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Treetop",
-			"rgb" : [70,107,44]
+			"name": "Forest Floor",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Twilight Purple",
-			"rgb" : [102,99,140]
+			"name": "Rev It Up",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Orion Blue",
-			"rgb" : [63,79,95]
+			"name": "Fathomless",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Calypso Coral",
-			"rgb" : [242,90,108]
+			"name": "Analogous",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		},
 		{
-			"name" : "Nimbus Cloud",
-			"rgb" : [214,212,218]
+			"name": "Moody Blooms",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
+		},
+		{
+			"name": "Deep Rooted",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
+		},
+		{
+			"name": "Calm It Down",
+			"colors" : [
+				{
+					"name" : "Greenery",
+					"rgb" : [133,176,66]
+				},
+				{
+					"name" : "Serenity",
+					"rgb" : [143,166,210]
+				},
+				{
+					"name" : "Rose Quartz",
+					"rgb" : [243,220,222]
+				},
+				{
+					"name" : "Treetop",
+					"rgb" : [70,107,44]
+				},
+				{
+					"name" : "Twilight Purple",
+					"rgb" : [102,99,140]
+				},
+				{
+					"name" : "Orion Blue",
+					"rgb" : [63,79,95]
+				},
+				{
+					"name" : "Calypso Coral",
+					"rgb" : [242,90,108]
+				},
+				{
+					"name" : "Nimbus Cloud",
+					"rgb" : [214,212,218]
+				}
+			]
 		}
 	]
+	
 }

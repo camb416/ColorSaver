@@ -72,22 +72,28 @@ void Config::loadGearData()
     
     cout << "...";
     
-    mColors.clear();
-    for( const auto &color: mData["colors"] ) {
-       
+    mPalettes.clear();
+    
+    for(const auto &palette: mData["palettes"]){
         
+        mPalettes.push_back(PaletteData());
+        mPalettes.back().name = palette.getValueForKey("name");
+        
+
+    
+    for( const auto &color: palette["colors"] ) {
+       
         string colorName = color.getValueForKey("name");
         auto theColor = color["rgb"];
         int r = theColor[0].getValue<int>();
         int g = theColor[1].getValue<int>();
         int b = theColor[2].getValue<int>();
-        mColors.push_back(ColorData());
-        mColors.back().name = colorName;
-        mColors.back().color = ColorA8u(r,g,b,255);
-      //  mColors.back().color = ColorA(1,1,1,1);
+        mPalettes.back().mColors.push_back(ColorData());
+        mPalettes.back().mColors.back().name = colorName;
+        mPalettes.back().mColors.back().color = ColorA8u(r,g,b,255);
         
-        cout << r << "," << g << "," << b << "\n";
     }
+        }
 }
 
 // ----------------------------------------------------------------------------------------------------

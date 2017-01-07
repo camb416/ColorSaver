@@ -26,7 +26,7 @@ private:
     params::InterfaceGlRef	mParams;
     ColorA					mColor;
     
-    std::vector<ColorData> mColors;
+    std::vector<PaletteData> mPalettes;
     
     std::vector<Rectf*> mRectangles;
     
@@ -36,7 +36,7 @@ private:
 
 void ColorSaverApp::setup()
 {
-   // Config::instance()->reload();
+    Config::instance()->reload();
    
     isMouseDown = false;
   //  mRectangles.clear();
@@ -46,16 +46,20 @@ void ColorSaverApp::setup()
     
     
     
-    mColors = Config::instance()->getColorData();
+    mPalettes = Config::instance()->getPaletteData();
     
-    int numColors = mColors.size();
-    
-    for(int i=0;i<numColors;i++){
+    int numPalettes = mPalettes.size();
+    for(int j = 0; j< numPalettes; j++){
+        int numColors = mPalettes.at(j).mColors.size();
         
-       mParams->addParam( mColors.at(i).name, &mColors.at(i).color );
-
-        
+        for(int i=0;i<numColors;i++){
+            
+            mParams->addParam( mPalettes.at(j).name + "_" + mPalettes.at(j).mColors.at(i).name, &mPalettes.at(j).mColors.at(i).color ).group( mPalettes.at(j).name ).label(mPalettes.at(j).mColors.at(i).name);
+            
+            
+        }
     }
+    
  
    
   //  auto imageSource = Config::instance()->getBackgroundImage();
@@ -70,15 +74,17 @@ void ColorSaverApp::mouseDown( MouseEvent event )
 {
     isMouseDown = true;
     Config::instance()->reload();
-    mColors = Config::instance()->getColorData();
+    mPalettes = Config::instance()->getPaletteData();
     
-    int numColors = mColors.size();
-    
-    for(int i=0;i<numColors;i++){
+    int numPalettes = mPalettes.size();
+    for(int j = 0; j< numPalettes; j++){
+        int numColors = mPalettes.at(j).mColors.size();
         
-        mParams->addParam( mColors.at(i).name, &mColors.at(i).color );
-        
-        
+        for(int i=0;i<numColors;i++){
+            
+            mParams->addParam( mPalettes.at(j).mColors.at(i).name, &mPalettes.at(j).mColors.at(i).color ).group( mPalettes.at(j).name );
+            
+        }
     }
 }
 void ColorSaverApp::mouseUp( MouseEvent event ){

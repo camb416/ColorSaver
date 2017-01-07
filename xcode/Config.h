@@ -14,6 +14,11 @@ struct ColorData {
     cinder::ColorA color;
 };
 
+struct PaletteData {
+    std::string name;
+    std::vector<ColorData> mColors;
+};
+
 class Config {
   public:
 
@@ -23,7 +28,7 @@ class Config {
 	void reload();
 	const std::vector<GearData>&	getGearData() const	{ return mGears; }
     
-    const std::vector<ColorData>&   getColorData() const { return mColors; }
+    const std::vector<PaletteData>&   getPaletteData() const { return mPalettes; }
 
 	ci::ImageSourceRef	getBackgroundImage() const;
 	float getDecentSpeed() const;
@@ -35,5 +40,5 @@ class Config {
 
 	ci::JsonTree			mData;
 	std::vector<GearData>	mGears;
-    std::vector<ColorData> mColors;
+    std::vector<PaletteData> mPalettes;
 };

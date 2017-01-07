@@ -31,6 +31,9 @@ private:
     std::vector<Rectf*> mRectangles;
     
     bool isMouseDown;
+    
+    vector<string>			mEnumNames;
+    int						mEnumSelection;
 
 };
 
@@ -41,17 +44,30 @@ void ColorSaverApp::setup()
     isMouseDown = false;
   //  mRectangles.clear();
     
+    
+    
     // Create the interface and give it a name.
-   mParams = params::InterfaceGl::create( getWindow(), "App parameters", toPixels( ivec2( 200, 400 ) ) );
+    mParams = params::InterfaceGl::create( getWindow(), "App parameters", toPixels( ivec2( 200, 400 ) ) );
+    
     
     
     
     mPalettes = Config::instance()->getPaletteData();
     
     int numPalettes = mPalettes.size();
+
+    for(int j = 0; j< numPalettes; j++){
+        mEnumNames.push_back(mPalettes.at(j).name);
+    }
+    
+    mParams->addParam( "Palette", mEnumNames, &mEnumSelection )
+    .keyDecr( "[" )
+    .keyIncr( "]" )
+    .updateFn( [this] { console() << "enum updated: " << mEnumNames[mEnumSelection] << endl; } );
+    
+    
     for(int j = 0; j< numPalettes; j++){
         int numColors = mPalettes.at(j).mColors.size();
-        
         for(int i=0;i<numColors;i++){
             
             mParams->addParam( mPalettes.at(j).name + "_" + mPalettes.at(j).mColors.at(i).name, &mPalettes.at(j).mColors.at(i).color ).group( mPalettes.at(j).name ).label(mPalettes.at(j).mColors.at(i).name);
@@ -59,7 +75,11 @@ void ColorSaverApp::setup()
             
         }
     }
+    // Add an enum (list) selector.
+    mEnumSelection = 0;
     
+    
+
  
    
   //  auto imageSource = Config::instance()->getBackgroundImage();

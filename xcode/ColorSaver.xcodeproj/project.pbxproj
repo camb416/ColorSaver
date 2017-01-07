@@ -16,7 +16,7 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
-		255F2B111E1DF4F400E04ABB /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255F2B0F1E1DF4F400E04ABB /* Config.cpp */; };
+		255F2B141E21662D00E04ABB /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255F2B121E21662D00E04ABB /* Config.cpp */; };
 		44E5A81FA29144B58117C930 /* ColorSaverApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30FAA3214E224C1AB16A7BCB /* ColorSaverApp.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -34,8 +34,8 @@
 		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		255F2B0F1E1DF4F400E04ABB /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
-		255F2B101E1DF4F400E04ABB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		255F2B121E21662D00E04ABB /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Config.cpp; path = ../src/Config.cpp; sourceTree = "<group>"; };
+		255F2B131E21662D00E04ABB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = ../src/Config.h; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		30FAA3214E224C1AB16A7BCB /* ColorSaverApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = ColorSaverApp.cpp; path = ../src/ColorSaverApp.cpp; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				255F2B0F1E1DF4F400E04ABB /* Config.cpp */,
-				255F2B101E1DF4F400E04ABB /* Config.h */,
+				255F2B121E21662D00E04ABB /* Config.cpp */,
+				255F2B131E21662D00E04ABB /* Config.h */,
 				30FAA3214E224C1AB16A7BCB /* ColorSaverApp.cpp */,
 			);
 			name = Source;
@@ -225,7 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E5A81FA29144B58117C930 /* ColorSaverApp.cpp in Sources */,
-				255F2B111E1DF4F400E04ABB /* Config.cpp in Sources */,
+				255F2B141E21662D00E04ABB /* Config.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -94,19 +94,20 @@ void ColorSaverApp::setup()
 void ColorSaverApp::mouseDown( MouseEvent event )
 {
     isMouseDown = true;
-    Config::instance()->reload();
-    mPalettes = Config::instance()->getPaletteData();
     
-    int numPalettes = mPalettes.size();
-    for(int j = 0; j< numPalettes; j++){
-        int numColors = mPalettes.at(j).mColors.size();
-        
-        for(int i=0;i<numColors;i++){
-            
-            mParams->addParam( mPalettes.at(j).mColors.at(i).name, &mPalettes.at(j).mColors.at(i).color ).group( mPalettes.at(j).name );
-            
-        }
-    }
+//    Config::instance()->reload();
+//    mPalettes = Config::instance()->getPaletteData();
+//    
+//    int numPalettes = mPalettes.size();
+//    for(int j = 0; j< numPalettes; j++){
+//        int numColors = mPalettes.at(j).mColors.size();
+//        
+//        for(int i=0;i<numColors;i++){
+//            
+//            mParams->addParam( mPalettes.at(j).mColors.at(i).name, &mPalettes.at(j).mColors.at(i).color ).group( mPalettes.at(j).name );
+//            
+//        }
+//    }
 }
 void ColorSaverApp::mouseUp( MouseEvent event ){
     isMouseDown = false;

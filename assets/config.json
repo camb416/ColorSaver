@@ -41,36 +41,36 @@
 			"name": "Ethereal Material",
 			"colors" : [
 				{
-					"name" : "Greenery2",
-					"rgb" : [133,176,66]
+					"name" : "Periscope",
+					"rgb" : [70,69,77]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Caramel Café",
+					"rgb" : [134,76,36]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "Rich Gold",
+					"rgb" : [200,179,116]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
+					"name" : "Dull Gold",
+					"rgb" : [139,111,72]
 				},
 				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
+					"name" : "Fruit Dove",
+					"rgb" : [206,91,120]
 				},
 				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
+					"name" : "Bodacious",
+					"rgb" : [184,107,163]
 				},
 				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
+					"name" : "Marlin",
+					"rgb" : [82,90,136]
 				},
 				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Greenery",
+					"rgb" : [134,175,73]
 				}
 			]
 		},
@@ -78,36 +78,36 @@
 			"name": "Grand Canyon",
 			"colors" : [
 				{
+					"name" : "Lead",
+					"rgb" : [122,137,144]
+				},
+				{
+					"name" : "Canyon Clay",
+					"rgb" : [206,132,119]
+				},
+				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
+					"rgb" : [134,175,73]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Plum Wine",
+					"rgb" : [103,70,81]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "Bone Brown",
+					"rgb" : [167,116,70]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
+					"name" : "Sheepskin",
+					"rgb" : [219,181,144]
 				},
 				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
+					"name" : "Cherry Mahogany",
+					"rgb" : [102,54,44]
 				},
 				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
-				},
-				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
-				},
-				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Copper",
+					"rgb" : [191,125,91]
 				}
 			]
 		},
@@ -115,36 +115,40 @@
 			"name": "Forest Floor",
 			"colors" : [
 				{
+					"name" : "Silt Green",
+					"rgb" : [171,189,177]
+				},
+				{
+					"name" : "Kalamata",
+					"rgb" : [95,92,77]
+				},
+				{
+					"name" : "Moss",
+					"rgb" : [153,157,96]
+				},
+				{
+					"name" : "Willow Bough",
+					"rgb" : [88,119,78]
+				},
+				{
+					"name" : "Grape Kiss",
+					"rgb" : [120,64,103]
+				},
+				{
+					"name" : "Redwood",
+					"rgb" : [164,86,76]
+				},
+				{
+					"name" : "Hydro",
+					"rgb" : [72,105,114]
+				},
+				{
+					"name" : "Bronze Mist",
+					"rgb" : [152,127,71]
+				},
+				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
-				},
-				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
-				},
-				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
-				},
-				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
-				},
-				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
-				},
-				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
-				},
-				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
-				},
-				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"rgb" : [131,177,79]
 				}
 			]
 		},
@@ -152,37 +156,42 @@
 			"name": "Rev It Up",
 			"colors" : [
 				{
+					"name" : "Black Onyx",
+					"rgb" : [44,39,45]
+				},
+				{
+					"name" : "Brilliant White",
+					"rgb" : [237,239,252]
+				},
+				{
+					"name" : "Blazing Yellow",
+					"rgb" : [247,235,55]
+				},
+				{
+					"name" : "Dazzling Blue",
+					"rgb" : [68,74,158]
+				},
+				{
+					"name" : "Orange Popsicle",
+					"rgb" : [247,121,36]
+				},
+				{
+					"name" : "Fandango",
+					"rgb" : [218,73,128]
+				},
+				{
+					"name" : "Drizzle",
+					"rgb" : [159,159,157]
+				},
+				{
+					"name" : "Prism Pink",
+					"rgb" : [238,159,191]
+				},
+				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
-				},
-				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
-				},
-				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
-				},
-				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
-				},
-				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
-				},
-				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
-				},
-				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
-				},
-				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"rgb" : [131,177,79]
 				}
+
 			]
 		},
 		{
@@ -190,35 +199,35 @@
 			"colors" : [
 				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
+					"rgb" : [134,175,73]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Online Lime",
+					"rgb" : [68,136,61]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "True Blue",
+					"rgb" : [31,68,120]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
+					"name" : "Directoire Blue",
+					"rgb" : [0,98,163]
 				},
 				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
+					"name" : "Viridian Green",
+					"rgb" : [0,147,154]
 				},
 				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
+					"name" : "Blue Radiance",
+					"rgb" : [89,201,213]
 				},
 				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
+					"name" : "Gobline Blue",
+					"rgb" : [95,114,120]
 				},
 				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Silver Blue ",
+					"rgb" : [138,154,154]
 				}
 			]
 		},
@@ -227,35 +236,35 @@
 			"colors" : [
 				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
+					"rgb" : [134,175,73]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Purple Haze",
+					"rgb" : [129,115,151]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "Smoky Grape",
+					"rgb" : [184,139,172]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
+					"name" : "Tawny Orange",
+					"rgb" : [213,127,112]
 				},
 				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
+					"name" : "Misted Yellow",
+					"rgb" : [220,185,103]
 				},
 				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
+					"name" : "Sphinx",
+					"rgb" : [172,152,151]
 				},
 				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
+					"name" : "Woodrose",
+					"rgb" : [175,140,144]
 				},
 				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Buttercream",
+					"rgb" : [240,225,205]
 				}
 			]
 		},
@@ -263,36 +272,40 @@
 			"name": "Moody Blooms",
 			"colors" : [
 				{
+					"name" : "Baton Rouge",
+					"rgb" : [147,54,107]
+				},
+				{
+					"name" : "Scarlet Ibis",
+					"rgb" : [239,82,41]
+				},
+				{
+					"name" : "Winter Bloom",
+					"rgb" : [69,34,58]
+				},
+				{
+					"name" : "Red Dahlia",
+					"rgb" : [130,49,58]
+				},
+				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
+					"rgb" : [131,177,79]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Pink Yarrow",
+					"rgb" : [202,69,126]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "Goji Berry",
+					"rgb" : [179,47,61]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
+					"name" : "Mayfly",
+					"rgb" : [106,109,82]
 				},
 				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
-				},
-				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
-				},
-				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
-				},
-				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Sulphur",
+					"rgb" : [217,186,46]
 				}
 			]
 		},
@@ -300,36 +313,36 @@
 			"name": "Deep Rooted",
 			"colors" : [
 				{
+					"name" : "Sepia Tint",
+					"rgb" : [138,117,96]
+				},
+				{
+					"name" : "Chai Tea",
+					"rgb" : [177,131,46]
+				},
+				{
+					"name" : "Brown Rice",
+					"rgb" : [199,187,165]
+				},
+				{
+					"name" : "Sharkskin",
+					"rgb" : [131,132,136]
+				},
+				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
+					"rgb" : [134,175,73]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Chrysanthemum",
+					"rgb" : [188,82,92]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "Gray Pinstripe",
+					"rgb" : [74,73,78]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
-				},
-				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
-				},
-				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
-				},
-				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
-				},
-				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Tofu",
+					"rgb" : [231,227,216]
 				}
 			]
 		},
@@ -338,35 +351,35 @@
 			"colors" : [
 				{
 					"name" : "Greenery",
-					"rgb" : [133,176,66]
+					"rgb" : [134,175,73]
 				},
 				{
-					"name" : "Serenity",
-					"rgb" : [143,166,210]
+					"name" : "Gray Lilac",
+					"rgb" : [214,203,211]
 				},
 				{
-					"name" : "Rose Quartz",
-					"rgb" : [243,220,222]
+					"name" : "Green Lily",
+					"rgb" : [189,206,190]
 				},
 				{
-					"name" : "Treetop",
-					"rgb" : [70,107,44]
+					"name" : "Pink Icing",
+					"rgb" : [236,161,166]
 				},
 				{
-					"name" : "Twilight Purple",
-					"rgb" : [102,99,140]
+					"name" : "Spa Blue",
+					"rgb" : [213,225,223]
 				},
 				{
-					"name" : "Orion Blue",
-					"rgb" : [63,79,95]
+					"name" : "Luminary Green",
+					"rgb" : [227,234,167]
 				},
 				{
-					"name" : "Calypso Coral",
-					"rgb" : [242,90,108]
+					"name" : "Paradise Green",
+					"rgb" : [181,231,160]
 				},
 				{
-					"name" : "Nimbus Cloud",
-					"rgb" : [214,212,218]
+					"name" : "Pure Cashmere",
+					"rgb" : [173,163,151]
 				}
 			]
 		}

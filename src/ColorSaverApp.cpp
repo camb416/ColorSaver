@@ -15,12 +15,12 @@ using namespace ci::app;
 using namespace std;
 
 class ColorSaverApp : public App {
-  public:
-	void setup() override;
-	void mouseDown( MouseEvent event ) override;
+public:
+    void setup() override;
+    void mouseDown( MouseEvent event ) override;
     void mouseUp( MouseEvent event ) override;
-	void update() override;
-	void draw() override;
+    void update() override;
+    void draw() override;
     
 private:
     params::InterfaceGlRef	mParams;
@@ -29,20 +29,21 @@ private:
     std::vector<PaletteData> mPalettes;
     
     std::vector<Rectf*> mRectangles;
+    std::vector<Color*> mRectColors;
     
     bool isMouseDown;
     
     vector<string>			mEnumNames;
     int						mEnumSelection;
-
+    
 };
 
 void ColorSaverApp::setup()
 {
     Config::instance()->reload();
-   
+    
     isMouseDown = false;
-  //  mRectangles.clear();
+    //  mRectangles.clear();
     
     
     
@@ -55,7 +56,7 @@ void ColorSaverApp::setup()
     mPalettes = Config::instance()->getPaletteData();
     
     int numPalettes = mPalettes.size();
-
+    
     for(int j = 0; j< numPalettes; j++){
         mEnumNames.push_back(mPalettes.at(j).name);
     }
@@ -79,11 +80,11 @@ void ColorSaverApp::setup()
     mEnumSelection = 0;
     
     
-
- 
-   
-  //  auto imageSource = Config::instance()->getBackgroundImage();
-
+    
+    
+    
+    //  auto imageSource = Config::instance()->getBackgroundImage();
+    
     
     //cout << imageSource;
     
@@ -114,30 +115,36 @@ void ColorSaverApp::mouseUp( MouseEvent event ){
 void ColorSaverApp::update()
 {
     if(isMouseDown){
-        ivec2 mousePos = getMousePos();
-        float x1 = randFloat(-.1,.1) + (float)mousePos.x;
-        float y1 = randFloat(-.1,.1) + (float)mousePos.y;
+        
+        Color color;
+        
+        color = mPalettes.at(0).mColors.at(randInt(mPalettes.at(0).mColors.size())).color;
+        mRectColors.push_back(new Color(color));
+        
+        ivec2 mousePos = getMousePos()-getWindowPos();
+        float x1 = (float)mousePos.x;
+        float y1 = (float)mousePos.y;
         float x2 = x1 + 10;
         float y2 = y1 + 10;
-        mRectangles.push_back( new Rectf( x1,y1,1,1 ));
+        mRectangles.push_back( new Rectf( x1,y1,x2,y2 ));
     }
 }
 
 void ColorSaverApp::draw()
 {
-	gl::clear( Color( 0, 0, 0 ) );
-
-    Color color = Color::gray( 0.34f );
-
-    gl::color( color );
+    gl::clear( Color( 0, 0, 0 ) );
+    
+    
     for(int i=0;i<mRectangles.size();i++){
+        
+        gl::color( *mRectColors.at(i) );
         gl::drawSolidRect(*mRectangles.at(i) );
     }
     
     
-   // if( !mIsSelected ){
-   
-        mParams->draw();
+    // if( !mIsSelected ){
+    
+    mParams->draw();
     
 }
 

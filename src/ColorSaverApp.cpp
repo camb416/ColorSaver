@@ -51,6 +51,9 @@ private:
     
     void button();
     float mSpeed;
+    float multiplier;
+    float multiplierDest;
+    ColorA bg;
     
 };
 
@@ -72,7 +75,9 @@ void ColorSaverApp::setup()
     
     isMouseDown = false;
     //  mRectangles.clear();
+    multiplier = multiplierDest = 0.0f;
     
+    bg = ColorA(0,0,0,1);
     
     
     // Create the interface and give it a name.
@@ -108,6 +113,8 @@ void ColorSaverApp::setup()
         mParams->setOptions(mPalettes.at(j).name, "opened=false");
 
     }
+    
+    mParams->addParam("Background",&bg);
     mSpeed = 0.025f;
     // Setup some basic parameters.
     mParams->addParam( "Speed", &mSpeed ).min( 0.01f ).max( 0.1f ).keyIncr( "z" ).keyDecr( "Z" ).precision( 3).step( 0.002f );
@@ -133,7 +140,7 @@ void ColorSaverApp::setup()
 void ColorSaverApp::mouseDown( MouseEvent event )
 {
     isMouseDown = true;
-    
+    multiplierDest = 0.0f;
 //    Config::instance()->reload();
 //    mPalettes = Config::instance()->getPaletteData();
 //    
@@ -150,10 +157,13 @@ void ColorSaverApp::mouseDown( MouseEvent event )
 }
 void ColorSaverApp::mouseUp( MouseEvent event ){
     isMouseDown = false;
+    multiplierDest = 1.0f;
 }
 
 void ColorSaverApp::update()
 {
+    
+    multiplier += (multiplierDest-multiplier)/4.0f;
     if(isMouseDown){
         
         Color color;
@@ -176,16 +186,16 @@ void ColorSaverApp::update()
         mCircles.push_back( c);
         
         startFrame = getElapsedFrames();
-    } else {
+    } //else {
         for(int i=0;i<mCircles.size();i++){
-            mCircles.at(i)->pos = cos((float)(getElapsedFrames()-startFrame+(float)i)*mSpeed)*(1.25f) * mCircles.at(i)->origin;
+            mCircles.at(i)->pos = cos(((float)(getElapsedFrames()-startFrame+(float)i)*mSpeed)*multiplier)*(1.0f) * mCircles.at(i)->origin;
         }
-    }
+    //}
 }
 
 void ColorSaverApp::draw()
 {
-    gl::clear( Color( 0, 0, 0 ) );
+    gl::clear( bg );
     
     
     for(int i=0;i<mCircles.size();i++){

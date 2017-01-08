@@ -14,6 +14,13 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
+struct Circle{
+    vec2 pos;
+    vec2 origin;
+    float size;
+    Color color;
+};
+
 class ColorSaverApp : public App {
 public:
     void setup() override;
@@ -31,9 +38,10 @@ private:
     
     std::vector<PaletteData> mPalettes;
     
-
+    int startFrame;
     
-    std::vector<Rectf*> mRectangles;
+//    std::vector<Rectf*> mRectangles;
+    std::vector<Circle*> mCircles;
     std::vector<Color*> mRectColors;
     
     bool isMouseDown;
@@ -41,7 +49,17 @@ private:
     vector<string>			mEnumNames;
     int						mEnumSelection;
     
+    void button();
+    float mSpeed;
+    
 };
+
+void ColorSaverApp::button()
+{
+    mCircles.clear();
+    console() << "Reset!" << endl;
+    //mParams->setOptions( "text", "label=`Clicked!`" );
+}
 
 void ColorSaverApp::prepare(Settings *settings){
     settings->setWindowSize( 1280, 720 );
@@ -90,7 +108,11 @@ void ColorSaverApp::setup()
         mParams->setOptions(mPalettes.at(j).name, "opened=false");
 
     }
+    mSpeed = 0.025f;
+    // Setup some basic parameters.
+    mParams->addParam( "Speed", &mSpeed ).min( 0.01f ).max( 0.1f ).keyIncr( "z" ).keyDecr( "Z" ).precision( 3).step( 0.002f );
     
+    mParams->addButton( "Reset", bind( &ColorSaverApp::button, this ) );
 
     
     // Add an enum (list) selector.
@@ -136,15 +158,28 @@ void ColorSaverApp::update()
         
         Color color;
         
-        color = mPalettes.at(0).mColors.at(randInt(mPalettes.at(0).mColors.size())).color;
-        mRectColors.push_back(new Color(color));
+      //  color = mPalettes.at(0).mColors.at(randInt(mPalettes.at(0).mColors.size())).color;
+      //  mRectColors.push_back(new Color(color));
         
-        ivec2 mousePos = getMousePos()-getWindowPos();
+        int howRandom = mPalettes.at(mEnumSelection).mColors.size();
+        int thisRandom = randInt(howRandom);
+        
+        ivec2 mousePos = getMousePos()-getWindowPos()-(getWindowSize()/2);
         float x1 = (float)mousePos.x;
         float y1 = (float)mousePos.y;
-        float x2 = x1 + 10;
-        float y2 = randFloat()*50.0f;
-        mRectangles.push_back( new Rectf( x1,y1,x2,y2 ));
+
+        Circle * c = new Circle();
+        c->pos = c->origin = vec2(x1,y1);
+        c->size = randFloat()*(float)thisRandom*5.0f+5.0f;
+        c->color = mPalettes.at(mEnumSelection).mColors.at(thisRandom).color;
+        
+        mCircles.push_back( c);
+        
+        startFrame = getElapsedFrames();
+    } else {
+        for(int i=0;i<mCircles.size();i++){
+            mCircles.at(i)->pos = cos((float)(getElapsedFrames()-startFrame+(float)i)*mSpeed)*(1.25f) * mCircles.at(i)->origin;
+        }
     }
 }
 
@@ -153,12 +188,18 @@ void ColorSaverApp::draw()
     gl::clear( Color( 0, 0, 0 ) );
     
     
-    for(int i=0;i<mRectangles.size();i++){
+    for(int i=0;i<mCircles.size();i++){
+        gl::pushMatrices();
+        gl::color( mCircles.at(i)->color );
+        vec2 circlePos = mCircles.at(i)->pos;
+        gl::translate(getWindowSize()/2);
+        gl::drawSolidCircle(circlePos,mCircles.at(i)->size);
         
-        gl::color( *mRectColors.at(i) );
-        vec2 circlePos = vec2(mRectangles.at(i)->x1,mRectangles.at(i)->y1);
-        gl::drawSolidCircle(circlePos,mRectangles.at(i)->y2);
-        //  gl::drawSolidRect(circlePos,mRectangles.at(i)->y2);
+        // highlight
+        //gl::color(ColorA(1,1,1,0.5f));
+        //gl::drawSolidCircle(circlePos-mCircles.at(i)->size/3,mCircles.at(i)->size/2);
+      
+        gl::popMatrices();
     }
     
     

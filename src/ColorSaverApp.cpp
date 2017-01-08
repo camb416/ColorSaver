@@ -22,11 +22,16 @@ public:
     void update() override;
     void draw() override;
     
+    static void prepare( Settings *settings );
+
+    
 private:
     params::InterfaceGlRef	mParams;
     ColorA					mColor;
     
     std::vector<PaletteData> mPalettes;
+    
+
     
     std::vector<Rectf*> mRectangles;
     std::vector<Color*> mRectColors;
@@ -37,6 +42,11 @@ private:
     int						mEnumSelection;
     
 };
+
+void ColorSaverApp::prepare(Settings *settings){
+    settings->setWindowSize( 1280, 720 );
+    settings->setHighDensityDisplayEnabled();
+}
 
 void ColorSaverApp::setup()
 {
@@ -76,6 +86,13 @@ void ColorSaverApp::setup()
             
         }
     }
+    for(int j = 0; j< numPalettes; j++){
+        mParams->setOptions(mPalettes.at(j).name, "opened=false");
+
+    }
+    
+
+    
     // Add an enum (list) selector.
     mEnumSelection = 0;
     
@@ -126,7 +143,7 @@ void ColorSaverApp::update()
         float x1 = (float)mousePos.x;
         float y1 = (float)mousePos.y;
         float x2 = x1 + 10;
-        float y2 = y1 + 10;
+        float y2 = randFloat()*50.0f;
         mRectangles.push_back( new Rectf( x1,y1,x2,y2 ));
     }
 }
@@ -139,7 +156,9 @@ void ColorSaverApp::draw()
     for(int i=0;i<mRectangles.size();i++){
         
         gl::color( *mRectColors.at(i) );
-        gl::drawSolidRect(*mRectangles.at(i) );
+        vec2 circlePos = vec2(mRectangles.at(i)->x1,mRectangles.at(i)->y1);
+        gl::drawSolidCircle(circlePos,mRectangles.at(i)->y2);
+        //  gl::drawSolidRect(circlePos,mRectangles.at(i)->y2);
     }
     
     
@@ -149,4 +168,6 @@ void ColorSaverApp::draw()
     
 }
 
-CINDER_APP( ColorSaverApp, RendererGl )
+//CINDER_APP( ColorSaverApp, RendererGl )
+CINDER_APP( ColorSaverApp, RendererGl( RendererGl::Options().msaa( 4 ) ), ColorSaverApp::prepare )
+
